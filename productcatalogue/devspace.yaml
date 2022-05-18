@@ -1,0 +1,75 @@
+version: v1beta10
+images:
+  productcatalogue:
+    image: lepolesa/productcatalogue
+    tags:
+    - debug
+    build:
+      docker:
+        # skipPush: true
+    injectRestartHelper: true
+    appendDockerfileInstructions:
+    - USER root
+deployments:
+- name: productcatalogue
+  kubectl:
+    manifests:
+    - manifests/
+dev:
+  ports:
+  - imageSelector: lepolesa/productcatalogue
+    forward:
+    - port: 8020
+  
+  # open:
+  # - url: http://localhost:8030/stocks
+  # - url: http://localhost:8089/
+  autoReload:
+    paths:
+    - ./target/productcatalogue-0.0.1-SNAPSHOT.jar
+    images:
+    - productcatalogue
+    deployments:
+    - productcatalogue
+
+profiles:
+- name: production
+  description: ""
+  patches:
+  - op: remove
+    path: images.productcatalogue.appendDockerfileInstructions
+  - op: remove
+    path: images.productcatalogue.injectRestartHelper
+- name: interactive
+  description: ""
+  patches:
+  - op: add
+    path: dev.interactive
+    value:
+      defaultEnabled: true
+  - op: add
+    path: images.productcatalogue.entrypoint
+    value:
+    - sleep
+    - "9999999999"
+
+hooks:
+- command: "kind load docker-image lepolesa/productcatalogue:$(docker images | grep lepolesa/productcatalogue | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster"
+  when:
+    after:
+      images: productcatalogue
+
+- command: "[ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ] && mvn clean package -Dmaven.test.skip=true || echo 'Exists'"
+  when:
+    before:
+      images: productcatalogue
+
+# - command: "while [ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ]; do sleep 1; done"
+#   when:
+#     before:
+#       images: productcatalogue
+
+vars:
+- name: TAG
+  question: Which tag do you want to use?
+  default: debug

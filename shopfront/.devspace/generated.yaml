@@ -1,0 +1,20 @@
+varsEncrypted: true
+profiles:
+  "":
+    deployments:
+      shopfront:
+        deploymentConfigHash: bfb3e4bfb7e3bf1c46096f23b5f65b9a9bcb7575d507034670b9096ad378d23e
+        kubectlManifestsHash: acd3c510ed340b693be209afedd009f8ec62393a45d6329fc9d30b6a3f0af3b3
+    images:
+      shopfront:
+        imageConfigHash: 355dfab738c346f8f7e17b40ed851184acc83214e964589fc493d0df2ed7be9e
+        dockerfileHash: d0305ea22e02075f9d8bd257902184a6a626f7237309fc6385f2dd242ef4360a
+        contextHash: 1e76f3987b21d1542ae9aabf458b5a4b11d9a46eaefd80075dd01086bdc509d7
+        imageName: lepolesa/shopfront
+        tag: debug
+    dependencies:
+      /Users/lepolesa/Documents/Development/reference-architecture/devops/devspace-example/example-proj/productcatalogue: 820d24e7e22c4864f31919260422b7f0809347286c855b669ad76ccb8aec20ee
+      /Users/lepolesa/Documents/Development/reference-architecture/devops/devspace-example/example-proj/stockmanager: a1f1359b77bef6353f9a62ffd06812228750302cfdec559943ce1f1540203b09
+    lastContext:
+      namespace: test
+      context: do-lon1-devspace

@@ -1,0 +1,23 @@
+FROM maven:3.6.3-jdk-11 AS builder
+
+WORKDIR /app
+
+COPY pom.xml .
+
+# RUN mvn dependency:resolve
+
+# RUN mvn dependency:go-offline -B
+
+ADD . .
+
+RUN ./build.sh
+
+CMD ["/bin/bash","build.sh", "run"]
+
+# FROM openjdk:11-jre
+
+# WORKDIR /app
+# # COPY --from=builder /app/target/stockmanager-0.0.1-SNAPSHOT.jar ./app.jar
+# EXPOSE 8030
+# #ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","./app.jar"]
+# CMD ["./app.jar"]

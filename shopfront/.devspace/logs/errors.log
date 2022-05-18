@@ -1,0 +1,4 @@
+{"level":"error","msg":"Runtime error occurred: error closing listener: close tcp4 127.0.0.1:8010: use of closed network connection","time":"2021-07-28T19:56:26+02:00"}
+{"level":"error","msg":"Runtime error occurred: error closing listener: close tcp6 [::1]:8010: use of closed network connection","time":"2021-07-28T19:56:26+02:00"}
+{"level":"error","msg":"Runtime error occurred: error closing listener: close tcp4 127.0.0.1:8010: use of closed network connection","time":"2021-07-28T21:55:22+02:00"}
+{"level":"error","msg":"Runtime error occurred: error closing listener: close tcp6 [::1]:8010: use of closed network connection","time":"2021-07-28T21:55:22+02:00"}

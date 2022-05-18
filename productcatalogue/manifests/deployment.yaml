@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productcatalogue
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productcatalogue
+  template:
+    metadata:
+      labels:
+        app: productcatalogue
+    spec:
+      containers:
+        - name: productcatalogue
+          image: lepolesa/productcatalogue:latest
+          ports:
+            - name: http
+              containerPort: 8020
+              protocol: TCP

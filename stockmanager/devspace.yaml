@@ -1,0 +1,140 @@
+version: v1beta10
+images:
+  stockmanager:
+    image: lepolesa/stockmanager
+    tags:
+    - debug
+    build:
+      docker:
+        # options:
+        #   target: builder
+        # skipPush: true
+    injectRestartHelper: true
+    appendDockerfileInstructions:
+    - USER root
+    - COPY ./run.sh ./
+    entrypoint:
+      - ./run.sh
+
+
+deployments:
+- name: stockmanager
+  kubectl:
+    manifests:
+    - manifests/
+
+dev:
+  ports:
+  - imageSelector: lepolesa/stockmanager
+    forward:
+    - port: 8030
+    - port: ${DEBUG_PORT}
+  
+  open:
+  - url: http://localhost:8089/
+  autoReload:
+    # paths:
+    # - ./target/
+    # images:
+    # - stockmanager
+    deployments:
+    - stockmanager
+  # replacePods:
+  # - imageSelector: lepolesa/stockmanager
+  #   patches:
+  #   - op: replace
+  #     path: spec.containers[0].imagePullPolicy
+  #     value: "Always"
+  sync:
+  - imageName: stockmanager
+    waitInitialSync: true
+    # disableUpload: true
+    containerPath: ./target/
+    localSubPath: ./target/
+    excludePaths:
+    - .git/
+    - target/classes
+    - target/test-classes
+    uploadExcludePaths:
+    - devspace.yaml
+    - Dockerfile
+    - manifests/
+    onUpload:           
+      restartContainer: true           
+
+profiles:
+- name: production
+  description: ""
+  patches:
+  - op: remove
+    path: images.stockmanager.appendDockerfileInstructions
+  - op: remove
+    path: images.stockmanager.injectRestartHelper
+  - op: replace
+    path: images.stockmanager.tags
+    value:
+    - v0.1 
+
+- name: debug
+  description: "start application in with remote debug configured"
+  patches:
+  - op: replace
+    path: images.stockmanager.entrypoint
+    value:
+    - java 
+    - "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=${DEBUG_PORT}"
+    - -jar 
+    - ./target/stockmanager-0.0.1-SNAPSHOT.jar
+  - op: add
+    path: images.stockmanager.appendDockerfileInstructions
+    value:
+      EXPOSE 6000
+
+- name: interactive
+  description: "start application in interactive mode"
+  merge:
+    dev:
+      terminal: 
+        imageName: stockmanager
+  # strategicMerge:
+  #   dev:
+  #     ports:
+  #     - imageSelector: lepolesa/stockmanager
+  #       forward:
+  #       - port: 8000  
+  patches:
+  - op: replace
+    path: images.stockmanager.entrypoint
+    value:
+    - sleep
+    - "9999999999"
+  - op: add
+    path: images.stockmanager.appendDockerfileInstructions
+    value:
+      "EXPOSE ${DEBUG_PORT}"
+  # - op: add
+  #   path: dev.ports.imageSelector=lepolesa/stockmanager.forward
+  #   value:
+  #   - port: 8000
+
+hooks:
+
+- command: "[ ! -f ./target/stockmanager-0.0.1-SNAPSHOT.jar ] && mvn clean package -Dmaven.test.skip=true || echo 'Exist'"
+  when:
+    before:
+      images: stockmanager
+
+- command: "echo"
+  args: ["Hello from within the container!"]
+  where: 
+    container:
+      imageName: stockmanager
+
+commands:
+- name: debug
+  command: "devspace dev -p debug"
+
+vars:
+- name: DEBUG_PORT
+  question: Which port do you want to use for remote debugging?
+  default: 8000

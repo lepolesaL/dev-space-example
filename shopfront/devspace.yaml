@@ -1,0 +1,73 @@
+version: v1beta10
+images:
+  shopfront:
+    image: lepolesa/shopfront
+    tags:
+    - debug
+    build:
+      docker:
+        # skipPush: true
+    injectRestartHelper: true
+    appendDockerfileInstructions:
+    - USER root
+deployments:
+- name: shopfront
+  kubectl:
+    manifests:
+    - manifests/
+dependencies:
+- name: product-catalogue
+  source:
+    path: ../productcatalogue
+  skipBuild: true
+
+- name: stock-manager
+  source:
+    path: ../stockmanager
+  skipBuild: true
+dev:
+  ports:
+  - imageSelector: lepolesa/shopfront
+    forward:
+    - port: 8010
+  
+  open:
+  - url: http://localhost:8010
+  autoReload:
+    paths:
+    - ./target/shopfront-0.0.1-SNAPSHOT.jar
+    images:
+    - shopfront
+    deployments:
+    - shopfront
+profiles:
+- name: production
+  description: ""
+  patches:
+  - op: remove
+    path: images.shopfront.appendDockerfileInstructions
+  - op: remove
+    path: images.shopfront.injectRestartHelper
+- name: interactive
+  description: ""
+  patches:
+  - op: add
+    path: dev.interactive
+    value:
+      defaultEnabled: true
+  - op: add
+    path: images.shopfront.entrypoint
+    value:
+    - sleep
+    - "9999999999"
+
+hooks:
+# - command: "kind load docker-image lepolesa/shopfront:$(docker images | grep lepolesa/shopfront | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster"
+#   when:
+#     after:
+#       images: shopfront
+
+- command: "[ ! -f ./target/shopfront-0.0.1-SNAPSHOT.jar.original ] && mvn clean package -Dmaven.test.skip=true || echo 'Exists'"
+  when:
+    before:
+      images: shopfront

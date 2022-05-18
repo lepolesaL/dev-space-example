@@ -1,0 +1,17 @@
+varsEncrypted: true
+profiles:
+  "":
+    deployments:
+      productcatalogue:
+        deploymentConfigHash: c603ded0bbb90f7017fb4cf95abedf4bce23587a78314bab52005de730189f64
+        kubectlManifestsHash: 21f76bb3e0574838e063184f65db08733c16a0e7765fca5da6246832ca2a471f
+    images:
+      productcatalogue:
+        imageConfigHash: 7194c4cab983bd790d4c2909ec3b5b21899ba1f41b9d288e658d96aef26325b9
+        dockerfileHash: 25dc491907d21842051dd61e508b0c9fbd26149c3211e0347ed1a8d67f6e8ba0
+        contextHash: 66b10c4b5c241c96125ea86a72bf88cb1bf1769f5c27bca8dfed0335e1f586fa
+        imageName: lepolesa/productcatalogue
+        tag: latest
+    lastContext:
+      namespace: test
+      context: do-lon1-devspace

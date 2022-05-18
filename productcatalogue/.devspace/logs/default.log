@@ -1,0 +1,137 @@
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-04T11:47:48+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-04T11:47:48+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mwhile [ ! -f ./target/productcatalogue-0.0.1-SNAPSHOT.jar ]; do sleep 1; done\u001b[0m'","time":"2021-07-04T11:47:48+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-04T11:51:17+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-04T11:51:17+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mwhile [ ! -f ./target/productcatalogue-0.0.1-SNAPSHOT.jar ]; do sleep 1; done\u001b[0m'","time":"2021-07-04T11:51:17+02:00"}
+{"level":"info","msg":"Building image 'lepolesa/productcatalogue:MlECtLL' with engine 'docker'","time":"2021-07-04T11:51:17+02:00"}
+{"level":"info","msg":"Skip image push for lepolesa/productcatalogue","time":"2021-07-04T11:51:20+02:00"}
+{"level":"info","msg":"Done processing image 'lepolesa/productcatalogue'","time":"2021-07-04T11:51:20+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mkind load docker-image lepolesa/productcatalogue:$(docker images | grep lepolesa/productcatalogue | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster\u001b[0m'","time":"2021-07-04T11:51:20+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-04T11:51:42+02:00"}
+{"level":"info","msg":"Port forwarding started on 8020:8020 (test/productcatalogue-fddb5b6b-82j4c)","time":"2021-07-04T11:51:44+02:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-07-04T11:51:44+02:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-07-04T11:51:44+02:00"}
+{"level":"info","msg":"Change detected in 'target/productcatalogue-0.0.1-SNAPSHOT.jar', will reload","time":"2021-07-04T12:01:20+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mwhile [ ! -f ./target/productcatalogue-0.0.1-SNAPSHOT.jar ]; do sleep 1; done\u001b[0m'","time":"2021-07-04T12:01:21+02:00"}
+{"level":"info","msg":"Building image 'lepolesa/productcatalogue:lBMocgC' with engine 'docker'","time":"2021-07-04T12:01:23+02:00"}
+{"level":"info","msg":"Skip image push for lepolesa/productcatalogue","time":"2021-07-04T12:01:25+02:00"}
+{"level":"info","msg":"Done processing image 'lepolesa/productcatalogue'","time":"2021-07-04T12:01:25+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mkind load docker-image lepolesa/productcatalogue:$(docker images | grep lepolesa/productcatalogue | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster\u001b[0m'","time":"2021-07-04T12:01:25+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-04T12:01:47+02:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-07-04T12:01:47+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-04T12:03:16+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-04T12:03:16+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mwhile [ ! -f ./target/productcatalogue-0.0.1-SNAPSHOT.jar ]; do sleep 10; done\u001b[0m'","time":"2021-07-04T12:03:17+02:00"}
+{"level":"info","msg":"Building image 'lepolesa/productcatalogue:MwqTTTb' with engine 'docker'","time":"2021-07-04T12:03:17+02:00"}
+{"level":"info","msg":"Skip image push for lepolesa/productcatalogue","time":"2021-07-04T12:03:18+02:00"}
+{"level":"info","msg":"Done processing image 'lepolesa/productcatalogue'","time":"2021-07-04T12:03:18+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mkind load docker-image lepolesa/productcatalogue:$(docker images | grep lepolesa/productcatalogue | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster\u001b[0m'","time":"2021-07-04T12:03:18+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-04T12:03:39+02:00"}
+{"level":"info","msg":"Port forwarding started on 8020:8020 (test/productcatalogue-859c7b5ccb-nj9mj)","time":"2021-07-04T12:03:41+02:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-07-04T12:03:41+02:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-07-04T12:03:41+02:00"}
+{"level":"info","msg":"Change detected in 'target/productcatalogue-0.0.1-SNAPSHOT.jar', will reload","time":"2021-07-04T12:04:14+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mwhile [ ! -f ./target/productcatalogue-0.0.1-SNAPSHOT.jar ]; do sleep 10; done\u001b[0m'","time":"2021-07-04T12:04:14+02:00"}
+{"level":"info","msg":"Building image 'lepolesa/productcatalogue:fQkHyem' with engine 'docker'","time":"2021-07-04T12:04:24+02:00"}
+{"level":"info","msg":"Skip image push for lepolesa/productcatalogue","time":"2021-07-04T12:04:27+02:00"}
+{"level":"info","msg":"Done processing image 'lepolesa/productcatalogue'","time":"2021-07-04T12:04:27+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mkind load docker-image lepolesa/productcatalogue:$(docker images | grep lepolesa/productcatalogue | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster\u001b[0m'","time":"2021-07-04T12:04:27+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-04T12:04:50+02:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-07-04T12:04:50+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-04T12:06:14+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-04T12:06:14+02:00"}
+{"level":"info","msg":"Successfully deleted deployment productcatalogue","time":"2021-07-04T12:06:14+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-04T12:57:54+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-04T12:57:54+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mwhile [ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ]; do sleep 1; done\u001b[0m'","time":"2021-07-04T12:57:54+02:00"}
+{"level":"info","msg":"Building image 'lepolesa/productcatalogue:vOzRySu' with engine 'docker'","time":"2021-07-04T12:57:54+02:00"}
+{"level":"info","msg":"Skip image push for lepolesa/productcatalogue","time":"2021-07-04T12:57:56+02:00"}
+{"level":"info","msg":"Done processing image 'lepolesa/productcatalogue'","time":"2021-07-04T12:57:56+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mkind load docker-image lepolesa/productcatalogue:$(docker images | grep lepolesa/productcatalogue | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster\u001b[0m'","time":"2021-07-04T12:57:56+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-04T12:58:18+02:00"}
+{"level":"info","msg":"Port forwarding started on 8020:8020 (test/productcatalogue-887f7795-4xcxn)","time":"2021-07-04T12:58:20+02:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-07-04T12:58:20+02:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-07-04T12:58:20+02:00"}
+{"level":"info","msg":"Change detected in 'target/productcatalogue-0.0.1-SNAPSHOT.jar', will reload","time":"2021-07-04T12:59:04+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mwhile [ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ]; do sleep 1; done\u001b[0m'","time":"2021-07-04T12:59:04+02:00"}
+{"level":"info","msg":"Building image 'lepolesa/productcatalogue:VHhmnty' with engine 'docker'","time":"2021-07-04T12:59:12+02:00"}
+{"level":"info","msg":"Skip image push for lepolesa/productcatalogue","time":"2021-07-04T12:59:14+02:00"}
+{"level":"info","msg":"Done processing image 'lepolesa/productcatalogue'","time":"2021-07-04T12:59:14+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mkind load docker-image lepolesa/productcatalogue:$(docker images | grep lepolesa/productcatalogue | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster\u001b[0m'","time":"2021-07-04T12:59:14+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-04T12:59:35+02:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-07-04T12:59:35+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-04T13:02:45+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-04T13:02:45+02:00"}
+{"level":"info","msg":"Successfully deleted deployment productcatalogue","time":"2021-07-04T13:02:46+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-15T21:29:55+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-15T21:29:55+02:00"}
+{"level":"info","msg":"Skip building image 'productcatalogue'","time":"2021-07-15T21:29:55+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-15T21:29:56+02:00"}
+{"level":"warning","msg":"Pod test/productcatalogue-dbd8c4c7-bjvvm has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2021-07-15T21:29:58+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-15T21:30:24+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-15T21:30:24+02:00"}
+{"level":"info","msg":"Successfully deleted deployment productcatalogue","time":"2021-07-15T21:30:24+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-15T21:30:28+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-15T21:30:28+02:00"}
+{"level":"info","msg":"Skip building image 'productcatalogue'","time":"2021-07-15T21:30:29+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-15T21:30:29+02:00"}
+{"level":"warning","msg":"Pod test/productcatalogue-dbd8c4c7-f59f8 has critical status: ErrImagePull. DevSpace will continue waiting, but this operation might timeout","time":"2021-07-15T21:30:36+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-15T21:31:39+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-15T21:31:39+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mwhile [ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ]; do sleep 1; done\u001b[0m'","time":"2021-07-15T21:31:39+02:00"}
+{"level":"info","msg":"Building image 'lepolesa/productcatalogue:NfXQaYu' with engine 'docker'","time":"2021-07-15T21:31:39+02:00"}
+{"level":"info","msg":"Skip image push for lepolesa/productcatalogue","time":"2021-07-15T21:31:40+02:00"}
+{"level":"info","msg":"Done processing image 'lepolesa/productcatalogue'","time":"2021-07-15T21:31:40+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mkind load docker-image lepolesa/productcatalogue:$(docker images | grep lepolesa/productcatalogue | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster\u001b[0m'","time":"2021-07-15T21:31:40+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-15T21:31:42+02:00"}
+{"level":"warning","msg":"Pod test/productcatalogue-58659d74d9-hr97j has critical status: ErrImagePull. DevSpace will continue waiting, but this operation might timeout","time":"2021-07-15T21:31:49+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-15T21:35:00+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-15T21:35:00+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mwhile [ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ]; do sleep 1; done\u001b[0m'","time":"2021-07-15T21:35:01+02:00"}
+{"level":"info","msg":"Building image 'lepolesa/productcatalogue:CGAspOX' with engine 'docker'","time":"2021-07-15T21:35:01+02:00"}
+{"level":"info","msg":"Skip image push for lepolesa/productcatalogue","time":"2021-07-15T21:35:03+02:00"}
+{"level":"info","msg":"Done processing image 'lepolesa/productcatalogue'","time":"2021-07-15T21:35:03+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mkind load docker-image lepolesa/productcatalogue:$(docker images | grep lepolesa/productcatalogue | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster\u001b[0m'","time":"2021-07-15T21:35:03+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-15T21:35:27+02:00"}
+{"level":"info","msg":"Port forwarding started on 8020:8020 (test/productcatalogue-59898768d-rz9nb)","time":"2021-07-15T21:35:29+02:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-07-15T21:35:29+02:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-07-15T21:35:29+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-26T21:32:54+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-26T21:32:54+02:00"}
+{"level":"info","msg":"Successfully deleted deployment productcatalogue","time":"2021-07-26T21:32:57+02:00"}
+{"level":"warning","msg":"\u001b[1;37mAre you using the correct kube context?\u001b[0m","time":"2021-07-28T12:07:29+02:00"}
+{"level":"warning","msg":"Current kube context: '\u001b[1;37mdo-lon1-devspace\u001b[0m'","time":"2021-07-28T12:07:29+02:00"}
+{"level":"warning","msg":"Last    kube context: '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-28T12:07:29+02:00"}
+{"level":"info","msg":"Use the '\u001b[1;37m-s / --switch-context\u001b[0m' flag to switch to the context and namespace previously used to deploy this project","time":"2021-07-28T12:07:29+02:00"}
+{"level":"info","msg":"Or use the '\u001b[1;37m--no-warn\u001b[0m' flag to ignore this warning","time":"2021-07-28T12:07:29+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-28T12:07:39+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdo-lon1-devspace\u001b[0m'","time":"2021-07-28T12:07:39+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37m[ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ] \u0026\u0026 mvn clean package -Dmaven.test.skip=true\u001b[0m'","time":"2021-07-28T12:07:40+02:00"}
+{"level":"fatal","msg":"in hook '\u001b[1;37m[ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ] \u0026\u0026 mvn clean package -Dmaven.test.skip=true\u001b[0m': exit status 1","time":"2021-07-28T12:07:40+02:00"}
+{"level":"warning","msg":"\u001b[1;37mAre you using the correct kube context?\u001b[0m","time":"2021-07-28T12:10:00+02:00"}
+{"level":"warning","msg":"Current kube context: '\u001b[1;37mdo-lon1-devspace\u001b[0m'","time":"2021-07-28T12:10:00+02:00"}
+{"level":"warning","msg":"Last    kube context: '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-28T12:10:00+02:00"}
+{"level":"info","msg":"Use the '\u001b[1;37m-s / --switch-context\u001b[0m' flag to switch to the context and namespace previously used to deploy this project","time":"2021-07-28T12:10:00+02:00"}
+{"level":"info","msg":"Or use the '\u001b[1;37m--no-warn\u001b[0m' flag to ignore this warning","time":"2021-07-28T12:10:00+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-28T12:10:10+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdo-lon1-devspace\u001b[0m'","time":"2021-07-28T12:10:10+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37m[ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ] \u0026\u0026 mvn clean package -Dmaven.test.skip=true\u001b[0m'","time":"2021-07-28T12:10:12+02:00"}
+{"level":"fatal","msg":"in hook '\u001b[1;37m[ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ] \u0026\u0026 mvn clean package -Dmaven.test.skip=true\u001b[0m': exit status 1","time":"2021-07-28T12:10:12+02:00"}
+{"level":"warning","msg":"\u001b[1;37mAre you using the correct kube context?\u001b[0m","time":"2021-07-28T12:13:26+02:00"}
+{"level":"warning","msg":"Current kube context: '\u001b[1;37mdo-lon1-devspace\u001b[0m'","time":"2021-07-28T12:13:26+02:00"}
+{"level":"warning","msg":"Last    kube context: '\u001b[1;37mkind-local-cluster\u001b[0m'","time":"2021-07-28T12:13:26+02:00"}
+{"level":"info","msg":"Use the '\u001b[1;37m-s / --switch-context\u001b[0m' flag to switch to the context and namespace previously used to deploy this project","time":"2021-07-28T12:13:26+02:00"}
+{"level":"info","msg":"Or use the '\u001b[1;37m--no-warn\u001b[0m' flag to ignore this warning","time":"2021-07-28T12:13:26+02:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mtest\u001b[0m'","time":"2021-07-28T12:13:36+02:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdo-lon1-devspace\u001b[0m'","time":"2021-07-28T12:13:36+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37m[ ! -f ./target/original-productcatalogue-0.0.1-SNAPSHOT.jar ] \u0026\u0026 mvn clean package -Dmaven.test.skip=true || echo 'Exists'\u001b[0m'","time":"2021-07-28T12:13:38+02:00"}
+{"level":"info","msg":"Building image 'lepolesa/productcatalogue:debug' with engine 'docker'","time":"2021-07-28T12:13:38+02:00"}
+{"level":"info","msg":"Authentication successful (hub.docker.com)","time":"2021-07-28T12:13:42+02:00"}
+{"level":"info","msg":"Image pushed to registry (hub.docker.com)","time":"2021-07-28T12:14:37+02:00"}
+{"level":"info","msg":"Done processing image 'lepolesa/productcatalogue'","time":"2021-07-28T12:14:37+02:00"}
+{"level":"info","msg":"Execute hook '\u001b[1;37mkind load docker-image lepolesa/productcatalogue:$(docker images | grep lepolesa/productcatalogue | awk -F' ' '{print $2}' | awk 'NR==1')  --name local-cluster\u001b[0m'","time":"2021-07-28T12:14:37+02:00"}
+{"level":"info","msg":"Successfully deployed productcatalogue with kubectl","time":"2021-07-28T12:15:05+02:00"}
+{"level":"info","msg":"Port forwarding started on 8020:8020 (test/productcatalogue-856cd7659d-lj2qd)","time":"2021-07-28T12:15:19+02:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-07-28T12:15:19+02:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-07-28T12:15:19+02:00"}
